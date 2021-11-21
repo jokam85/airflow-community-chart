@@ -609,7 +609,7 @@ web:
                   'client_secret': 'a3f28de8-04f3-4c7b-8d70-4fc205e97203',
                   'api_base_url': 'http://localhost/auth/realms/airflow/protocol/openid-connect/auth',
                   'client_kwargs': {
-                      'scope': 'openid profile email groups'
+                      'scope': 'openid,profile,email,groups'
                   },
                   'access_token_url': 'http://localhost/auth/realms/airflow/protocol/openid-connect/token',
                   'authorize_url': 'http://localhost/auth/realms/airflow/protocol/openid-connect/auth',
