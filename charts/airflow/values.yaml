@@ -654,13 +654,16 @@ web:
           },
         },
       ]
+      
       class CustomAuthRemoteUserView(AuthOAuthView):
         @expose("/logout/")
         def logout(self):
           """Delete access token before logging out."""
           return super().logout()
+      
       class CustomSecurityManager(AirflowSecurityManager):
         authoauthview = CustomAuthRemoteUserView
+      
       def oauth_user_info(self, provider, response):
           if provider == MY_PROVIDER:
             token = response["access_token"]
@@ -675,6 +678,7 @@ web:
               groups = ["airflow_public"]
             else:
               groups = [str for str in groups if "airflow" in str]
+      
       userinfo = {
               "username": me.get("preferred_username"),
               "email": me.get("email"),
@@ -686,7 +690,9 @@ web:
             return userinfo
           else:
             return {}
+            
       SECURITY_MANAGER_CLASS = CustomSecurityManager
+      
       APP_THEME = "simplex.css"
 
     ## the name of a Secret containing a `webserver_config.py` key
