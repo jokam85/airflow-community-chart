@@ -679,7 +679,7 @@ web:
             else:
               groups = [str for str in groups if "airflow" in str]
       
-      userinfo = {
+            userinfo = {
               "username": me.get("preferred_username"),
               "email": me.get("email"),
               "first_name": me.get("given_name"),
