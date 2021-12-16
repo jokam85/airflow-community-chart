@@ -621,9 +621,9 @@ web:
       MY_PROVIDER = 'keycloak'
       CLIENT_ID = 'airflow'
       CLIENT_SECRET = 'a3f28de8-04f3-4c7b-8d70-4fc205e97203'
-      KEYCLOAK_BASE_URL = 'http://localhost/auth/realms/airflow/protocol/openid-connect/'
-      KEYCLOAK_TOKEN_URL = 'http://keycloak.keycloak.svc.cluster.local/auth/realms/airflow/protocol/openid-connect/token'
-      KEYCLOAK_AUTH_URL = 'http://localhost/auth/realms/airflow/protocol/openid-connect/auth'
+      KEYCLOAK_BASE_URL = 'http://keycloak.keycloak.svc/auth/realms/airflow/protocol/openid-connect/'
+      KEYCLOAK_TOKEN_URL = 'http://keycloak.keycloak.svc/auth/realms/airflow/protocol/openid-connect/token'
+      KEYCLOAK_AUTH_URL = 'http://keycloak.keycloak.svc/auth/realms/airflow/protocol/openid-connect/auth'
       AUTH_TYPE = AUTH_OAUTH
       AUTH_USER_REGISTRATION = True
       AUTH_USER_REGISTRATION_ROLE = "Public"
